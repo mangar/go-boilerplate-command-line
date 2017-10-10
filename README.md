@@ -1,7 +1,11 @@
 # go-boilerplate-command-line
 
 
-WRITE THE MOTIVATION
+This is a basic project for go command line program.
+Features:
+- configuration at home directory
+- help
+- install and uninstall 
 
 
 
@@ -82,39 +86,14 @@ Prints the config file
 Look for ```@BOILERPLATE``` in all code and check what you have to change in order configure parts of the software.
 
 
-
-
-
-## Simple
-  
-- Get the code from git repo
-- Run: ```make``` and ```make install```
-- type: ```uber99.rga install```
-	- this will create the ```~/.rga.config``` dir and a basic ```taxi.yml```
-- Enjoy
-
-Any question, type: ```uber99.rga help```
-
-
-
-
-
-
 ## Making
 
     make
     make install
 
 
-## Extra packages
+## Extra packages - for development
 
     go get gopkg.in/kyokomi/emoji.v1
 
 
-
-
-
-
-# License
-
-Copyright © 2017 R/GA SP Office. 
