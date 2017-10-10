@@ -46,6 +46,9 @@ func main() {
 	} else if os.Args[1] == "clearlog" {
 		cmd.ClearLog()
 
+	} else if os.Args[1] == "showlog" {
+		cmd.ShowLog()
+
 		/**
 		* @BOILERPLATE
 		*

@@ -19,6 +19,7 @@ func Help() {
 	fmt.Println("options:")
 	fmt.Println(" clear      clear the temp dir ")
 	fmt.Println(" clearlog   remove all log files ")
+	fmt.Println(" showlog    prints log content for last thread")
 	fmt.Println(" help       show this content")
 	fmt.Println(" install    create the basic structure for configruation")
 	fmt.Println(" uninstall  remove the the basic structure for configruation")
