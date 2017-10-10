@@ -39,34 +39,45 @@ func main() {
 	} else if os.Args[1] == "version" {
 		printVersion()
 
-	} else if len(os.Args) < 4 {
-		fmt.Println("usage: go run main.go SERVICE_PROVIDER INPUT_DIR OUTPUT_DIR")
+	} else if os.Args[1] == "clear" {
+		cmd.Clear()
+
+		/**
+		* @BOILERPLATE
+		*
+		* change the number of mandatory params needed
+		 */
+	} else if len(os.Args) < 2 {
+
+		/**
+		 * @BOILERPLATE
+		 *
+		 * define your own error message and the basic usage message for the user
+		 */
+		fmt.Println("usage: go run go-boilerplate.go PARAM1 PARAM2")
 		fmt.Println("Ex.:")
-		fmt.Println("go run main.go [uber|99] ../data/input/uber ../.data/output")
+		fmt.Println("go run go-boilerplate.go PARAM1 PARAM2")
 		fmt.Println("")
 
 	} else {
 
+		/**
+		 * @BOILERPLATE
+		 *
+		 * run your program here
+		 */
 		log.LogDebug("running!", config.FlagDebug)
 
-		// general.ServiceProvider = os.Args[1]
-		// general.InputDir = os.Args[2]
-		// general.OutputDir = os.Args[3]
+		/**
+		 * @BOILERPLATE
+		 *
+		 * save extra params in
+		 */
+		config.Param1 = os.Args[1]
+		config.Param2 = os.Args[2]
 
-		// log.LogDebug("Service Provider Selected: "+general.ServiceProvider, config.FlagDebug)
-		// log.LogDebug("InputDir: "+general.InputDir, config.FlagDebug)
-
-		// if general.ServiceProvider == general.ServiceProviderUber {
-		// 	uberRecords := uber.Read()
-		// 	output.WriteUber(uberRecords)
-
-		// } else if general.ServiceProvider == general.ServiceProvider99 {
-		// 	taxi99Records := taxi99.Read()
-		// 	output.WriteTaxi99(taxi99Records)
-
-		// } else {
-		// 	log.LogError("hum.... looks that the service provider informed is not quite right. check if it's uber or 99")
-		// }
+		log.LogClean("Param1: " + config.Param1)
+		log.LogClean("Param2: " + config.Param2)
 
 	}
 

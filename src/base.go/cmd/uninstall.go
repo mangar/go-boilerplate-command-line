@@ -13,13 +13,8 @@ import (
  *
  */
 func Uninstall() {
-
-	tempDir := config.ConfigDir
-
-	if err := exec.Command("sh", "-c", "rm -rf "+tempDir).Run(); err != nil {
+	if err := exec.Command("sh", "-c", "rm -rf "+config.ConfigDir).Run(); err != nil {
 		log.LogError("Error removing project home directory")
 	}
-
 	log.LogSuccess("Uninstall complete!")
-
 }

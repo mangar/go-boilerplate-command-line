@@ -12,6 +12,7 @@ import (
 var FlagDebug = false
 
 var ConfigDir = HomeDir() + "/.go-boilerplate"
+var TempDir = ConfigDir + "/temp"
 var ConfigFile = "config.yml"
 
 func Initialize() {

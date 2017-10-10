@@ -41,7 +41,7 @@ func createHome() {
 
 func createTempDir() {
 
-	tempDir := config.ConfigDir + "/temp"
+	tempDir := config.TempDir
 
 	_, err := os.Stat(tempDir)
 	if os.IsNotExist(err) {

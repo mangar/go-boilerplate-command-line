@@ -30,6 +30,8 @@ The log.LogDebug need to have an extra parameter. This parameter can be fixed: `
 
 
 
+- - - 
+
 
 
 ## Command line parameters
@@ -54,12 +56,22 @@ Prints all commands available.
 
 ### Version
 
+Prints the build date and time.
+
+```go run go-boilerplate.go version```
 
 
 
+### Config
 
-###
 
+Prints the config file
+
+```go run go-boilerplate.go config```
+
+
+
+- - - 
 
 
 

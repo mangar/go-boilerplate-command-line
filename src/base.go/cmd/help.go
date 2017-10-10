@@ -17,7 +17,7 @@ func Help() {
 	fmt.Println("go run boilerplate.go PARAM1 PARAM2")
 	fmt.Println("")
 	fmt.Println("options:")
-	// fmt.Println(" clear    perform the cleaning on temporary dir. The temporary dir is located at ~/.gonfig/ ")
+	fmt.Println(" clear      clear the temp dir ")
 	fmt.Println(" help       show this content")
 	fmt.Println(" install    create the basic structure for configruation")
 	fmt.Println(" uninstall  remove the the basic structure for configruation")

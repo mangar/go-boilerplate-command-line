@@ -5,6 +5,11 @@ import (
 	"io/ioutil"
 )
 
+/**
+ * @BOILERPLATE
+ *
+ * structure of the config file
+ */
 type ConfigSetup struct {
 	Log string `json:log`
 }
@@ -15,6 +20,5 @@ func GetConfig() ConfigSetup {
 	data, _ := ioutil.ReadFile(ConfigFilePath())
 	json.Unmarshal([]byte(data), &Config)
 
-	// fmt.Println(&Config)
 	return Config
 }
