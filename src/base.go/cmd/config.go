@@ -6,6 +6,13 @@ import (
 	"base.go/config"
 )
 
+/**
+ * @BOILERPLATE
+ *
+ * Replace the content from config file you want to be presented
+ * Sometimes just the file path is enought.
+ *
+ */
 func ShowConfig() {
 	config.GetConfig()
 

@@ -21,8 +21,8 @@ func Help() {
 	fmt.Println(" help       show this content")
 	fmt.Println(" install    create the basic structure for configruation")
 	fmt.Println(" uninstall  remove the the basic structure for configruation")
-	// fmt.Println(" config     display the configuration loaded from config file")
-	// fmt.Println(" version    display the version and build time")
+	fmt.Println(" config     display the configuration loaded from config file")
+	fmt.Println(" version    display the version and build time")
 	fmt.Println("")
 
 }

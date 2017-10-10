@@ -37,13 +37,25 @@ The log.LogDebug need to have an extra parameter. This parameter can be fixed: `
 
 ### Install / Uninstall
 
+The installation process is: 1) create the project directory (~/.go-boilerplate); 2) temp dir and 3) basic config file.
+
+```go run go-boilerplate.go install```
+
+```go run go-boilerplate.go uninstall```
+
 
 
 ### Help
 
+Prints all commands available.
+
+```go run go-boilerplate.go help```
 
 
 ### Version
+
+
+
 
 
 ###
