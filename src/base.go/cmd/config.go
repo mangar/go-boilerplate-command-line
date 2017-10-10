@@ -16,7 +16,7 @@ import (
 func ShowConfig() {
 	config.GetConfig()
 
-	fmt.Println("Configuration: (", config.ConfigFilePath(), ")")
+	fmt.Println("Configuration: (", config.ConfigDir+"/"+config.ConfigFile, ")")
 	fmt.Println("")
 	fmt.Println("Log:", config.Config.Log)
 
