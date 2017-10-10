@@ -27,6 +27,9 @@ func main() {
 	if os.Args[1] == "install" {
 		cmd.Install()
 
+	} else if os.Args[1] == "uninstall" {
+		cmd.Uninstall()
+
 	} else if os.Args[1] == "help" {
 		cmd.Help()
 
