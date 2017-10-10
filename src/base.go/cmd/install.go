@@ -61,7 +61,7 @@ func createTempDir() {
  */
 func createConfigFile() {
 
-	tempDir := config.ConfigFilePath()
+	tempDir := config.ConfigDir + "/" + config.ConfigFile
 	_, err := os.Stat(tempDir)
 
 	if os.IsNotExist(err) {

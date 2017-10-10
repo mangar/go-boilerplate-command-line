@@ -17,7 +17,7 @@ type ConfigSetup struct {
 var Config = ConfigSetup{}
 
 func GetConfig() ConfigSetup {
-	data, _ := ioutil.ReadFile(ConfigFilePath())
+	data, _ := ioutil.ReadFile(ConfigDir + "/" + ConfigFile)
 	json.Unmarshal([]byte(data), &Config)
 
 	return Config

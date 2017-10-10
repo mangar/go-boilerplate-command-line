@@ -18,6 +18,7 @@ var (
 )
 
 func main() {
+	log.LogStart("> > > > >")
 
 	if os.Getenv("FlagDebug") == "true" {
 		config.FlagDebug = true
@@ -42,12 +43,15 @@ func main() {
 	} else if os.Args[1] == "clear" {
 		cmd.Clear()
 
+	} else if os.Args[1] == "clearlog" {
+		cmd.ClearLog()
+
 		/**
 		* @BOILERPLATE
 		*
 		* change the number of mandatory params needed
 		 */
-	} else if len(os.Args) < 2 {
+	} else if len(os.Args) <= 2 {
 
 		/**
 		 * @BOILERPLATE
@@ -64,13 +68,6 @@ func main() {
 		/**
 		 * @BOILERPLATE
 		 *
-		 * run your program here
-		 */
-		log.LogDebug("running!", config.FlagDebug)
-
-		/**
-		 * @BOILERPLATE
-		 *
 		 * save extra params in
 		 */
 		config.Param1 = os.Args[1]
@@ -79,7 +76,15 @@ func main() {
 		log.LogClean("Param1: " + config.Param1)
 		log.LogClean("Param2: " + config.Param2)
 
+		/**
+		 * @BOILERPLATE
+		 *
+		 * run your program here
+		 */
+
 	}
+
+	log.LogEnd("< < < < <")
 
 }
 
