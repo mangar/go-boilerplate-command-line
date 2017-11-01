@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"os/exec"
 	"time"
 
 	"base.go/config"
@@ -14,17 +15,26 @@ import (
  */
 func ShowLog() {
 
-	log.LogDebug("file:"+getLastFile(), config.FlagDebug)
+	lastLogFileName := getLastFile()
+	log.LogDebug("file:"+lastLogFileName, config.FlagDebug)
+
+	//
+	cmd := "rm " + lastLogFileName + ".tmp"
+	log.LogDebug("cmd: "+cmd, config.FlagDebug)
+	exec.Command("sh", "-c", cmd).Run()
+
+	cmd = "tail -n 100 " + lastLogFileName + " > " + lastLogFileName + ".tmp"
+	log.LogDebug("cmd: "+cmd, config.FlagDebug)
+	exec.Command("sh", "-c", cmd).Run()
+
+	// abre o arquivo procura o ultimo > > > > >
+
+	// print a partir do ultimo > > > > > até o final do arquivo
 
 }
 
-/**
- * @BOILERPLATE
- *
- * change the log file pattern (go-boilerplate_060201.log) to one that fits your needs
- */
 func getLastFile() string {
 	now := time.Now()
-	fileName := config.GetConfig().Log + "/" + now.Format("go-boilerplate_060201.log")
+	fileName := config.GetConfig().Log + "/" + now.Format(config.TempFileNameTemplate)
 	return fileName
 }
