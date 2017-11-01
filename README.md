@@ -97,3 +97,14 @@ Look for ```@BOILERPLATE``` in all code and check what you have to change in ord
     go get gopkg.in/kyokomi/emoji.v1
 
 
+
+
+
+- - - 
+
+
+## TODO
+
+- Log rotate
+- 
+
