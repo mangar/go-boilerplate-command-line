@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"fmt"
 	"os/exec"
 	"time"
 
@@ -27,9 +28,13 @@ func ShowLog() {
 	log.LogDebug("cmd: "+cmd, config.FlagDebug)
 	exec.Command("sh", "-c", cmd).Run()
 
-	// abre o arquivo procura o ultimo > > > > >
+	// TODO
+	// printa o arquivo...
+	cmd = "tail -n 100 " + lastLogFileName + ".tmp"
+	log.LogDebug("cmd: "+cmd, config.FlagDebug)
+	out, _ := exec.Command("sh", "-c", cmd).Output()
 
-	// print a partir do ultimo > > > > > até o final do arquivo
+	fmt.Printf("%s", out)
 
 }
 
