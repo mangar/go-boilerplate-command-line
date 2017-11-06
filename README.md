@@ -105,6 +105,7 @@ Look for ```@BOILERPLATE``` in all code and check what you have to change in ord
 
 ## TODO
 
-- Log rotate
+- [ok] Log rotate
+- [ok] lock
 - 
 

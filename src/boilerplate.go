@@ -76,11 +76,20 @@ func main() {
 		log.LogClean("Param1: " + config.Param1)
 		log.LogClean("Param2: " + config.Param2)
 
-		/**
-		 * @BOILERPLATE
-		 *
-		 * run your program here
-		 */
+		if config.IsLocked() {
+			log.LogError("Program already running.")
+
+		} else {
+			config.Lock()
+
+			/**
+			 * @BOILERPLATE
+			 *
+			 * run your program here
+			 */
+
+			config.Unlock()
+		}
 
 	}
 
